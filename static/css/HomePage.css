@@ -1,0 +1,120 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: rgb(238,241,245);
+    height: 100%;
+}
+.navigation{
+    display: block;
+    top:0;
+    left: 0;
+    /*border-top: 2px solid #fa7d3c;*/
+    box-shadow: 0 0 1px 0px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    z-index:999;
+}
+.navigation-active{
+    position: fixed;
+    top: 0;
+}
+#logoback{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    background-color:#fa7d3c;
+}
+#logo{
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-top: -20px;
+    margin-left: 15px;
+
+}
+#logotext{
+    float: left;
+    position: absolute;
+    height: 48px;
+    width: 270px;
+    left: 120px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Arial Black";
+    text-align:center;
+    color:dimgray;
+    line-height: 48px; /*设置line-height与父级元素的height相等*/
+
+}
+#mainpage{
+    float: right;
+    height: 46px;
+    width: 80px;
+    color: dimgray;
+    font-family: "Arial Black";
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #fa7d3c;
+    line-height: 43px; /*设置line-height与父级元素的height相等*/
+    text-align: center; /*设置文本水平居中*/
+
+}
+#falsemainbody{
+    position: relative;
+    top: 80px;
+    height:100000000px;
+    width:86% ;
+    margin:0 7% 0 7% ;
+    background-color: white;
+}
+
+
+#table{
+    position: relative;
+    width: 96%;
+    border-top:2px solid #fa7d3c;
+    margin:0 2% 0 2% ;
+    top: 30px;
+    font-size: 13px;
+    text-align:center;
+
+
+
+}
+#tablehead{
+    color: #fa7d3c;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+#tbMain{
+    text-align: center;
+}
+#insertNew {
+    position:relative;
+    top:50px;
+    left:50%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-align: center;
+    background-color: whitesmoke;
+    color: #fa7d3c;
+    border: 2px solid #fa7d3c;
+    border-radius:5px;
+    margin-left:-50px;
+    font-size:16px;
+    width:100px;
+    height:30px;
+
+}
+#insertNew:hover {
+    background-color: #fa7d3c;
+    color: white;
+}
+#up,#down{
+    width:25px;
+    height:25px;
+}

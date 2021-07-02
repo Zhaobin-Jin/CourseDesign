@@ -1,0 +1,291 @@
+.descriptions{
+    font-size:14pt;display:block;
+    font-family: "Arial Black";
+    text-align:left;color:dimgray;
+    filter:blur(add=t,direction=135,strength=10);
+    font-weight: bolder;
+}
+.description{
+    font-size:20pt;display:block;
+    text-align:left;color:#fa7d3c;
+    filter:blur(add=t,direction=135,strength=10);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #F00;
+    font-family: "Arial Black";
+
+}
+.in{
+    height:20px;
+    font-size:16px;
+    border:1px solid #fa7d3c;
+}
+#cost input{
+background-color:transparent;border:0;
+}
+#allocation input{
+    height:20px;
+    font-size:16px;
+    border:1px solid rgb(153,153,153);
+    width:150px;
+
+}
+#inn{
+            height:28px;
+		    position:relative;
+            display:block;
+            margin:20px auto;
+
+}
+html{
+    height: 100%;
+}
+.logicPic{
+    width: 100%;
+}
+#photoform1 input{
+    display:inline-block;
+}
+.descriptions1{
+    font-size:12pt;display:block;
+    text-align:center;color:dimgray;
+    filter:blur(add=t,direction=135,strength=10);
+    font-weight: bolder;
+}
+body{
+    background-color: rgb(238,241,245);
+    height: 100%;
+}
+.navigation{
+    display: block;
+    top:0;
+    left: 0;
+    /*border-top: 2px solid #fa7d3c;*/
+    box-shadow: 0 0 1px 0px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    z-index:999;
+}
+.navigation-active{
+    position: fixed;
+    top: 0;
+}
+#logoback{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    background-color:#fa7d3c;
+}
+#logo{
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-top: -20px;
+    margin-left: 15px;
+
+}
+#logotext{
+    float: left;
+    position: absolute;
+    height: 48px;
+    width: 270px;
+    left: 120px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Arial Black";
+    text-align:center;
+    color:dimgray;
+    line-height: 48px; /*设置line-height与父级元素的height相等*/
+
+}
+#mainpage{
+    float: right;
+    height: 46px;
+    width: 80px;
+    color: dimgray;
+    font-family: "Arial Black";
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #fa7d3c;
+    line-height: 43px; /*设置line-height与父级元素的height相等*/
+    text-align: center; /*设置文本水平居中*/
+
+}
+#falsemainbody{
+    position: relative;
+    top: 40px;
+    height:10000000000px;
+    width:82% ;
+    margin:0 9% 0 9% ;
+    background-color: white;
+}
+
+#product{
+     display: flex;
+     justify-content:center;
+
+}
+.changetable{
+		    position:relative;
+            display:inline-block;
+            margin-left:20px;
+			width: 100px;/*设置按钮宽度*/
+			height: 30px;/*设置按钮高度*/
+			color:white;/*字体颜色*/
+			background-color: #fa7d3c;/*按钮背景颜色*/
+			border-radius: 3px;/*让按钮变得圆滑一点*/
+			border-width: 0;/*消去按钮丑的边框*/
+			outline: none;/*取消轮廓*/
+			font-family: KaiTi;/*字体设置为楷体*/
+			font-size: 17px;/*设置字体大小*/
+			text-align: center;/*字体居中*/
+			cursor: pointer;/*设置鼠标箭头手势*/
+}
+#addnewtb{
+
+		    position:relative;
+            display:block;
+            margin:20px auto;
+			width: 100px;/*设置按钮宽度*/
+			height: 30px;/*设置按钮高度*/
+			color:white;/*字体颜色*/
+			background-color: #fa7d3c;/*按钮背景颜色*/
+			border-radius: 3px;/*让按钮变得圆滑一点*/
+			border-width: 0;/*消去按钮丑的边框*/
+			outline: none;/*取消轮廓*/
+			font-family: KaiTi;/*字体设置为楷体*/
+			font-size: 17px;/*设置字体大小*/
+			text-align: center;/*字体居中*/
+			cursor: pointer;/*设置鼠标箭头手势*/
+}
+
+		.pphoto,#udproductname,#udpricetable{
+
+		    position:relative;
+            display:block;
+            margin:20px auto;
+			width: 50px;/*设置按钮宽度*/
+			height: 30px;/*设置按钮高度*/
+			color:white;/*字体颜色*/
+			background-color: #fa7d3c;/*按钮背景颜色*/
+			border-radius: 3px;/*让按钮变得圆滑一点*/
+			border-width: 0;/*消去按钮丑的边框*/
+			outline: none;/*取消轮廓*/
+			font-family: KaiTi;/*字体设置为楷体*/
+			font-size: 17px;/*设置字体大小*/
+			text-align: center;/*字体居中*/
+			cursor: pointer;/*设置鼠标箭头手势*/
+		}
+
+#updateimg{
+    height:30px;
+    width:30px;
+    position:relative;
+    top:10px;
+    left:-20px;
+}
+.updatepicture{
+    float:right;
+    height:30px;
+    width:30px;
+    position:relative;
+    top:0px;
+    right:80px;
+}
+#updateprice, #updatesoft, #updatehard{
+    height:30px;
+    width:30px;
+    position:relative;
+    top:-48px;
+    left:90px;
+}
+
+.first{
+     margin-top:10px;
+     border:1px solid #fa7d3c;
+     border-top:3px solid #fa7d3c;
+     height:auto;
+     }
+.marginleft{
+     margin-left:30px;
+}
+#formdiv{
+     width:100%;
+}
+#tablehead1,#tablehead2,#tablehead3,#tablehead4{
+    color: white;
+    font-weight: 600;
+    background-color: #fa7d3c;
+    width: 100%;
+    font-size: 16px;
+    border:1px solid #ccc;
+
+}
+#table1,#table2,#table3{
+    position: relative;
+    font-size: 16px;
+    text-align:center;
+    margin: 0;
+    table-layout:fixed;
+    word-wrap:break-word;
+    word-break:break-all;
+    border-collapse: collapse;
+    color:#555555;
+
+}
+#tbMain1,#tbMain2,#tbMain3,#tbMain4 ,#tbMain{
+    text-align: center;
+    border:1px solid #ccc;
+
+}
+#allocation td{
+    word-wrap:break-word;word-break:break-all;
+    border:None;
+
+}
+
+.tbhead{
+
+    color: #fa7d3c;
+    font-weight: 600;
+    background-color: whitesmoke;
+    width: 100%;
+    font-size: 16px;
+
+}
+#tb1, #tb2, #tb3, #tb4, #tb5{
+    border:2px solid #fa7d3c;
+    position: relative;
+    font-size: 16px;
+    margin: 0;
+    table-layout:fixed;
+    word-wrap:break-word;
+    word-break:break-all;
+    border-collapse: collapse;
+    color:#555555;
+
+}
+td{
+    word-wrap:break-word;word-break:break-all;
+    border:1px solid #ccc;
+
+}
+input{text-overflow:ellipsis}
+.name{
+    font-weight: bold;
+    font-size: 16px;
+    border-collapse: collapse;
+    text-align: center;
+}
+.pic{
+    width: 40%;
+}
+
+#logic input{
+position:relative;
+display:block;
+                margin:20px auto;
+
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新产品</title>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/Update.css')}}"/>
+
+</head>
+<body>
+<div class="navigation">
+    <div id="logoback">
+        <img id="logo"src="/static/photos/logo.png" onclick="back()">
+
+    </div>
+    <div id="logotext">教学产品管理系统</div>
+    <div id="mainpage">新产品</div>
+</div>
+<div id="falsemainbody">
+<div class="first">
+    <form id="form1" method="post">
+    <div id="product">
+        <div class="inlineblock">
+
+        <p class="descriptions">分类:</p>
+        <input  class="in" id="classification" name="classification" type="text"  ></br>
+
+        </div>
+        <div class="inlineblock">
+        <p class="descriptions">产品名称:</p>
+        <input class="in" id="productname" name="productname" type="text" ></br>
+
+        </div>
+        <div class="inlineblock">
+
+        <p class="descriptions">版本:</p>
+        <input  class="in" id="version" size="7" name="version" type="text"  ></br>
+
+        </div>
+                <div class="inlineblock">
+
+        <p class="descriptions">售价(万):</p>
+        <input  class="in" size="4" id="price" name="price" type="text"  ></br>
+
+        </div>
+        <div class="inlineblock">
+
+        <p class="descriptions">研发成本(万):</p>
+        <input  class="in" size="4" id="research_costs" name="research_costs" type="text"  ></br>
+
+        </div>        <div class="inlineblock">
+
+        <p class="descriptions">负责人:</p>
+        <input  class="in" id="chargeperson" size="7" name="chargeperson" type="text"  ></br>
+
+        </div>
+        </div>
+        <button id="udproductname" type="submit">添加</button>
+
+    </form>
+
+</div>
+    <div class="first">
+           <form method="post" enctype="multipart/form-data">
+                <p class="description">产品外观</p>
+                <img class="pic" src="{{ photo }}">
+                <input type="file" size="30" name="photo"/>
+                <p class="description">软件界面</p>
+                <img class="pic" src="{{ photo_2 }}">
+                <input type="file" size="30" name="photo_2"/>
+                <p class="description">产品视频</p>
+                <video class="pic" preload controls>
+                    <source src="{{video}}"/>
+                </video>
+                <input type="file" size="30" name="video"/>
+                <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
+            </form>
+    </div>
+
+        <div class="first">
+        <p class="description">逻辑框架</p>
+        <form method="post" enctype="multipart/form-data">
+            <p>自适应巡航逻辑框图:</p>
+            <img class="logicPic" src="{{ image_1 }}">
+            <input type="file" size="30" name="image_1"/>
+            <p>泊车辅助逻辑框图:</p>
+            <img class="logicPic" src="{{ image_2 }}">
+            <input type="file" size="30" name="image_2"/>
+            <p>车道线识别保持逻辑框图:</p>
+            <img class="logicPic" src="{{ image_3 }}">
+            <input type="file" size="30" name="image_3"/>
+            <p>疲劳驾驶检测逻辑框图:</p>
+            <img class="logicPic" src="{{ image_4 }}">
+            <input type="file" size="30" name="image_4"/>
+            <p>自适应前照明逻辑框图:</p>
+            <img class="logicPic" src="{{ image_5 }}">
+            <input type="file" size="30" name="image_5"/>
+            </br>
+            <p>逻辑框架visio文件:</p>
+            <input type="file" size="30" name="visio"/>
+            <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
+        </form>
+    </div>
+
+     <div id="allocation">
+        <p class="description">配置参数</p>
+
+
+    </div>
+    <div id="cost">
+        <p class="description">成本核算</p>
+
+        <div class="first">
+            <p class="descriptions">硬件成本</p>
+
+                <form id="hardform" method="post">
+
+            <table id="table1" cellspacing="0" width="100%">
+                <thead>
+
+                <tr id="tablehead1">
+                                                                <th width="30px">产品型号</th>
+                                                                    <th width="30px">分类</th>
+
+                    <th width="48px">名称</th>
+                    <th width="22px">版本</th>
+                    <th width="40px">硬件名称</th>
+                    <th width="50px">硬件型号</th>
+                    <th width="20px">数量</th>
+                    <th width="20px">单价(万元)</th>
+                    <th width="20px">总价(万元)</th>
+                    <th width="30px">是否可二次使用</th>
+                    <th width="28px">二次使用价格</th>
+                    <th width="28px">推荐供应商1</th>
+                    <th width="28px">推荐供应商2</th>
+                    <th width="28px">推荐供应商3</th>
+                                                <th width="30px">操作</th>
+
+
+
+                </tr>
+                </thead>
+
+                <tbody id="tbMain1"></tbody>
+
+            </table>
+            </form>
+        </div>
+        <div class="first">
+            <p class="descriptions">软件成本</p>
+
+            <form id="softform" method="post">
+
+                <table id="table2" width="100%" cellspacing="0">
+                    <thead >
+
+                    <tr id="tablehead2"  width="100%" >
+                                            <th width="30px">产品型号</th>
+                                                                    <th width="30px">分类</th>
+
+                    <th width="48px">名称</th>
+                    <th width="22px">版本</th>
+                        <th width="40px">软件名称</th>
+                        <th width="56px">主要内容</th>
+                        <th width="20px">数量</th>
+                        <th width="25px">单价(万元)</th>
+                        <th width="25px">总价(万元)</th>
+                        <th width="30px">是否可二次使用</th>
+                        <th width="30px">二次使用价格</th>
+                        <th width="30px">推荐供应商1</th>
+                        <th width="30px">推荐供应商2</th>
+                        <th width="15px">推荐供应商3</th>
+                                                <th width="30px">操作</th>
+
+                    </tr>
+                    </thead>
+
+                    <tbody id="tbMain2" ></tbody>
+
+                </table>
+            </form>
+
+
+        </div>
+        <div class="first">
+            <p class="descriptions">产品售价</p>
+
+
+<form id="priceform" method="post">
+            <table id="table3" width="100%" cellspacing="0">
+                <thead>
+
+                <tr id="tablehead3"  width="100%" >
+                    <th width="30px">型号</th>
+                    <th width="48px">名称</th>
+                    <th width="22px">版本</th>
+                    <th width="30px">硬性成本(万元)</th>
+                    <th width="35px">首次软性成本(万元)</th>
+                    <th width="30px">开发周期(天)</th>
+                    <th width="28px">单次硬性成本</th>
+                    <th width="28px">单次软性成本</th>
+                    <th width="30px">单次成本合计</th>
+                    <th width="25px">成本比例</th>
+                </tr>
+
+                </thead>
+
+                <tbody id="tbMain3">
+
+                </tbody>
+                <tr id="tablehead4"  width="100%" >
+                    <th width="30px">实际对外</th>
+                    <th width="48px">代理比率</th>
+                    <th width="22px">利润分成</th>
+                    <th width="30px">对外利润</th>
+                    <th width="35px">实际利润</th>
+                    <th width="30px">利润要求</th>
+                    <th width="30px">产品售价</th>
+                    <th width="28px">实际利润率</th>
+                    <th width="28px">对外利润率</th>
+                    <th width="25px">操作</th>
+
+                </tr>
+                <tbody id="tbMain4">
+
+                </tbody>
+
+
+            </table>
+</form>
+
+        </div>
+
+
+    </div>
+
+<div class="first">
+
+    <div id="resource">
+        <p class="description">技术支持文档</p>
+        <div class="first">
+            <table id="table" width="100%" cellspacing="0">
+                <tbody id="tbMain">
+
+                </tbody>
+
+            </table>
+        </div>
+        <div id="upload">
+<table id="newtable" width="100%" cellspacing="0">
+                <tbody id="newtbMain">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div id="formdiv">
+            <form id="uploadnew" method="post"  enctype="multipart/form-data">
+                <input type="radio" name="whichone" value="三维结构" checked>三维结构
+                <input type="radio" name="whichone" value="产品手册">产品手册
+                <input class="marginleft" type="text" name="filename" placeholder="文件名称">
+                <input  class="marginleft" type="text" name="filedate" placeholder="修改日期">
+
+                <input  class="marginleft" type="file" size="20" placeholder="上传文件" name="photo"/>
+                <input type="submit" value="添加信息"/>
+            </form>
+                </div>
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+      </div>
+
+</body>
+<script type="text/javascript" src="{{ url_for('static',filename='/js/addnew.js')}}"></script>
+
+</html>

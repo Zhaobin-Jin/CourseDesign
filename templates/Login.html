@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/Login.css')}}"/>
+</head>
+<body>
+<h1>智能网联汽车教育产品管理平台</h1>
+<div id="mainbody">
+    <img id="login" src="/static/photos/login.png" >
+    <form action="/deal_login" method="post">
+        <input type="text" required="required" placeholder="用户名" name="username" >
+        <br>
+
+        <input type="text" required="required" placeholder="密码" name="password" id="password" onclick="hideP()">
+        <img id="showText" src="/static/photos/showtext.png" onclick="hideShowPsw()">
+
+        <br>
+
+
+        <button class="loginbutton" type="submit">登录</button>
+
+    </form>
+</div>
+
+
+</body>
+<script type="text/javascript" >
+    var demoImg = document.getElementById("showText");
+var demoInput =document.getElementById("password")
+function hideShowPsw() {
+
+    if (demoInput.type == "password") {
+        demoInput.type = "text";
+        demoImg.src ="{{ url_for('static',filename='/photos/hidetext.png')}}";
+    } else {
+        demoInput.type = "password";
+        demoImg.src = "{{ url_for('static',filename='/photos/showtext.png')}}";
+    }
+}
+function hideP() {
+    demoInput.type="password";
+    demoInput.removeEventListener(onclick);
+
+}
+</script>
+
+</html>

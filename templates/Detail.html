@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>详情页</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/Detail.css')}}"/>
+</head>
+<body>
+<div class="navigation">
+    <div id="logoback">
+        <img id="logo" src="/static/photos/logo.png"  onclick="back()">
+
+    </div>
+    <div id="logotext">教学产品管理系统</div>
+    <div id="currentPlace">当前位置：</div>
+    <div id="mainpage">负责人：</div>
+</div>
+
+<ul class="menu" id="menu">
+
+    <li><a href="#basic">基本信息</a></li>
+    <li><a href="#logic">逻辑框架</a></li>
+    <li><a href="#allocation">配置参数</a></li>
+    <li><a href="#cost">成本核算</a></li>
+    <li><a href="#resource">资源下载</a></li>
+
+</ul>
+<div id="falsemainbody">
+<div id="basic">
+        <div id="photodiv1" class="photosPlate">
+            <p class="descriptions">·产品外观</p >
+      <img id="left-scroll" src="static/photos/xiangzuo.png" class="left-scroll">
+      <img id="right-scroll"  src="static/photos/xiangyou.png" class="right-scroll">
+        </div>
+
+        <div id="photodiv2" class="photosPlate">
+            <p class="descriptions">·软件界面</p >
+
+      <img id="left-scroll1" src="static/photos/xiangzuo.png" class="left-scroll">
+      <img id="right-scroll1"  src="static/photos/xiangyou.png" class="right-scroll">
+        </div>
+        <div id="photodiv3" class="photosPlate">
+            <p class="descriptions">·产品视频</p >
+        </div>
+    </div>
+    <div id="logic">
+        <p class="description">逻辑框架</p>
+
+    </div>
+       <div id="allocation">
+           <p class="description">配置参数</p>
+    </div>
+    <div id="cost">
+        <p class="description">成本核算</p>
+<div class="firstPic">
+            <p class="descriptions">硬件成本</p>
+            <table id="table1" cellspacing="0" width="100%">
+                <thead>
+
+                <tr id="tablehead1">
+                    <th width="40px">硬件名称</th>
+                    <th width="50px">硬件型号</th>
+                    <th width="20px">数量</th>
+                    <th width="25px">单价(万元)</th>
+                    <th width="25px">总价(万元)</th>
+                    <th width="33px">是否可二次使用</th>
+                    <th width="30px">二次使用价格</th>
+                    <th width="30px">推荐供应商1</th>
+                    <th width="30px">推荐供应商2</th>
+                    <th width="30px">推荐供应商3</th>
+
+
+                </tr>
+                </thead>
+
+                <tbody id="tbMain1"></tbody>
+
+            </table>
+
+        </div>
+        <div class="firstPic">
+            <p class="descriptions">软件成本</p>
+            <table id="table2" width="100%" cellspacing="0">
+                <thead >
+
+                <tr id="tablehead2"  width="100%" >
+                    <th width="40px">软件名称</th>
+                    <th width="56px">主要内容</th>
+                    <th width="20px">数量</th>
+                    <th width="25px">单价(万元)</th>
+                    <th width="25px">总价(万元)</th>
+                    <th width="36px">是否可二次使用</th>
+                    <th width="32px">二次使用价格</th>
+                    <th width="30px">推荐供应商1</th>
+                    <th width="30px">推荐供应商2</th>
+                    <th width="30px">推荐供应商3</th>
+                </tr>
+                </thead>
+
+                <tbody id="tbMain2" ></tbody>
+
+            </table>
+
+        </div>
+        <div class="firstPic">
+            <p class="descriptions">产品售价</p>
+            <table id="table3" width="100%" cellspacing="0">
+                <thead>
+
+                <tr id="tablehead3"  width="100%" >
+                    <th width="30px">型号</th>
+                    <th width="48px">名称</th>
+                    <th width="22px">版本</th>
+                    <th width="30px">硬性成本(万元)</th>
+                    <th width="35px">首次软性成本(万元)</th>
+                    <th width="30px">开发周期(天)</th>
+                    <th width="28px">单次硬性成本</th>
+                    <th width="28px">单次软性成本</th>
+                    <th width="30px">单次成本合计</th>
+                    <th width="25px">批量成本合计</th>
+                </tr>
+
+                </thead>
+
+                <tbody id="tbMain3">
+
+                </tbody>
+                <tr id="tablehead4"  width="100%" >
+                    <th width="30px">成本比例</th>
+                    <th width="48px">实际对外</th>
+                    <th width="22px">代理比率</th>
+                    <th width="30px">利润分成</th>
+                    <th width="35px">对外利润</th>
+                    <th width="30px">实际利润</th>
+                    <th width="30px">利润要求</th>
+                    <th width="28px">产品售价</th>
+                    <th width="28px">实际利润率</th>
+                    <th width="25px">对外利润率</th>
+                </tr>
+                <tbody id="tbMain4">
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+    </div>
+    <div id="resource">
+        <p class="description">技术支持文档</p>
+
+        <div class="firstPic">
+
+            <table id="table" width="100%" cellspacing="0">
+                <tbody id="tbMain">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="{{url_for('static',filename='/js/detail.js')}}"></script>
+
+
+</html>

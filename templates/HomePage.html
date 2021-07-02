@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <meta charset="UTF-8" >-->
+    <meta  charset="UTF-8">
+    <title>首页</title>
+        <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/HomePage.css')}}"/>
+</head>
+<body>
+<div class="navigation">
+    <div id="logoback">
+        <img id="logo" src="/static/photos/logo.png" >
+
+    </div>
+    <div id="logotext">教学产品管理系统</div>
+    <div id="mainpage">首页</div>
+</div>
+<div id="falsemainbody">
+        <table id="table" cellspacing="0" frame="above">
+            <tr id="tablehead">
+                <th width="20px">序号</th>
+                <th width="20px">排序</th>
+                <th width="50px">分类</th>
+                <th width="50px">名称</th>
+                <th width="30px">版本</th>
+                <th width="45px">研发成本(万元)</th>
+                <th width="45px">批量成本(万元)</th>
+                <th width="35px">售价(万元)</th>
+                <th width="35px">更新时间</th>
+                <th width="35px">负责人</th>
+                <th width="50px">操作</th>
+            </tr>
+            <tbody id="tbMain"></tbody>
+
+        </table>
+    <button id="insertNew" onclick="newproduct()">添加新产品</button>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="{{url_for('static',filename='/js/function.js')}}"></script>
+
+
+</html>
